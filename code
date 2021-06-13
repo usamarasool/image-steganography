@@ -1,0 +1,119 @@
+while(true){
+                        int click3 = setKey();
+                        int click4 = -1;
+                        String settedKey = "";
+                        if(click3 == 0){
+                                ImageIcon setKeyImg = new ImageIcon("Set Key.jpg");                   
+                                JLabel keyLab = new JLabel("Enter Key in numbers:                                                ");
+                                JPasswordField keyF = new JPasswordField();
+                                Object[] aLoginObj = {keyLab, keyF};
+
+                                click4 = JOptionPane.showConfirmDialog(null, aLoginObj, "Setting Low Key", JOptionPane.OK_CANCEL_OPTION,JOptionPane.DEFAULT_OPTION,setKeyImg);
+                                settedKey = new String(keyF.getPassword());
+                        }
+                        if(click3 == 1){
+                                ImageIcon setKeyImg = new ImageIcon("Set Key.jpg");                   
+                                JLabel keyLab = new JLabel("Enter Key in Alphabets:                                                ");
+                                JPasswordField keyF = new JPasswordField();
+                                Object[] aLoginObj = {keyLab, keyF};
+
+                                click4 = JOptionPane.showConfirmDialog(null, aLoginObj, "Setting Medium Key", JOptionPane.OK_CANCEL_OPTION,JOptionPane.DEFAULT_OPTION,setKeyImg);
+                                settedKey = new String(keyF.getPassword());
+                        }
+                        if(click3 == 2){
+                                ImageIcon setKeyImg = new ImageIcon("Set Key.jpg");                   
+                                JLabel keyLab = new JLabel("Enter Key Mixed (Numbers & Alphabets):                                                ");
+                                JPasswordField keyF = new JPasswordField();
+                                Object[] aLoginObj = {keyLab, keyF};
+                                
+                                click4 = JOptionPane.showConfirmDialog(null, aLoginObj, "Setting High Key", JOptionPane.OK_CANCEL_OPTION,JOptionPane.DEFAULT_OPTION,setKeyImg);
+                                settedKey = new String(keyF.getPassword());
+                        }          
+                        if(click4 == JOptionPane.OK_OPTION){
+                            ImageIcon setKeyImg = new ImageIcon("Set Key.jpg");                        
+                            String[] Op = {"OK"}; 
+                            JOptionPane.showOptionDialog(null,"You setted "+settedKey+" as key.","Setted Key", 0, JOptionPane.QUESTION_MESSAGE, setKeyImg, Op, 0);                            
+                            break;
+                        }
+                    }
+                    //..............
+                }
+                if(click2 == JOptionPane.CANCEL_OPTION){
+                    f.setVisible(false);
+                }    
+                if(click2 == JOptionPane.CLOSED_OPTION){
+                    f.setVisible(false);
+                }                
+                       
+            }
+        
+    }
+}
+//..............    
+    public static int setKey(){   //method for showing setting key
+        
+                ImageIcon setKeyImg = new ImageIcon("Set Key.jpg");
+                String[] setKeyOp = {"Low","Medium","High"}; 
+                int click3 = JOptionPane.showOptionDialog(null, "\n\n\n\n\n      Select Security Level Of Key:                               \n\n\n\n\n"                                        
+                                                              , "Setting Key", 0, JOptionPane.QUESTION_MESSAGE, setKeyImg, setKeyOp, 0);
+                
+                return click3;
+                
+    }
+ //............
+    public static int home(String ad1, String ad2, String ad3, String ad4, String ad5){   //method for showing home page and returing response of first click
+              
+        ImageIcon homeImg = new ImageIcon("Home Img.jpg");        
+        String[] homeOp = {"Profile Managment","Start","About","Quit",};
+        int click1 = JOptionPane.showOptionDialog(null, "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "--------------------------                             "
+                                                      + "  \n|                                                  "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "                
+                                                      + " |\n|                                                  "
+                                                      + "                      Image                                  "
+                                                      + "                                                       "
+                                                      + "                 Steganography                                 "
+                                                      + "                                                       "
+                                                      + "                    |\n|                               "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "                                                       "                
+                                                      + "                    |                  \n--------------"                                                         
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "------------                       \n\n\n\n            "
+                                                      + "                                                       "
+                                                      + "                                                       "
+                                                      + "---------------------------------\n                    "
+                                                      + "                                                       "
+                                                      + "                                              |        "
+                                                      + "         ADS                   |\n                            "
+                                                      + "          ---------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "---\n\n                                         "+ad1+""
+                                                      + "\n\n                                         "+ad2+"   "
+                                                      + "\n\n                                         "+ad3+"   "
+                                                      + "\n\n                                         "+ad4+"   "
+                                                      + "\n\n                                         "+ad5+"   "                                                              
+                                                      + "\n\n                                     --------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "-------------------------------------------------------"
+                                                      + "----------------------------------\n\n\n\n             "
+                                                      , "Home", 0, JOptionPane.QUESTION_MESSAGE, homeImg, homeOp, 0);        
+        
+        return click1;
+    
+    }    
+}
